@@ -1,18 +1,18 @@
-= Standalone RSpec Integration Test Suite
+# Standalone RSpec + Capybara
 
-== Project Layout
+## Project Layout
 
 * spec/integration/*_spec.rb : RSpec Scenario
-* spec/spec_helper.rb : Configures the driver and the hostname to use
-* spec/support/ : Additional configuration
+* spec/spec_helper.rb : Configure the Test suite
+* spec/support/ : Additional Helpers
 * spec/fixtures/ : YAML files you can user as fixtures in your tests
 
-== Prerequisites
+## Prerequisites
 
 * Ruby http://www.ruby-lang.org/en/downloads/
 * Bundler: gem install bundler
 
-== For Cpybara-Webkit
+## For Capybara-Webkit
 
 If you want to use `capybara-webkit` (Github)[https://github.com/thoughtbot/capybara-webkit] Please install Qt first. On OSX:
 
@@ -29,13 +29,13 @@ Finally, configure Capybara to use webkit:
 
     capybara.default_driver = :webkit    # in spec/spec_helper.rb:54
 
-== Configuration
+## Configuration
 
 Install Gems:
     
     bundle install
 
-== Running Features
+## Running Features
 
 To run all features: 
 
@@ -47,7 +47,7 @@ To run a specific feature:
 
 See [Sinple Test](https://github.com/grosser/single_test) for examples.
 
-== Using fixtures
+## Using fixtures
 
 `$data` is the global variable. It's an object. Each method is a file in `spec/fixtures/`. For example, you have the file `spec/fixtures/user1.yml`, which contains an attribute (`name`).
 You can access this data everywhere with:
@@ -58,7 +58,7 @@ The pattern:
 
     one_value = $data.file_name.value
 
-== Additional Documentation
+## Additional Links
 
 * http://relishapp.com/rspec
-* http://github.com/jnicklas/capybara (for actions such as click_link, click_button, etc...)
+* http://github.com/jnicklas/capybara
