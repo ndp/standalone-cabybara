@@ -2,10 +2,10 @@
 
 ## Project Layout
 
-* spec/integration/*_spec.rb : RSpec Scenario
-* spec/spec_helper.rb : Configure the Test suite
-* spec/support/ : Additional Helpers
-* spec/fixtures/ : YAML files you can user as fixtures in your tests
+* `spec/integration/*_spec.rb` : RSpec Scenario
+* `spec/spec_helper.rb` : Configure the Test suite
+* `spec/support/` : Additional Helpers
+* `spec/fixtures/` : YAML files you can user as fixtures in your tests
 
 ## Prerequisites
 
