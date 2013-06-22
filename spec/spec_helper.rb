@@ -8,10 +8,13 @@ require "capybara/poltergeist"
 require "selenium-webdriver"
 # require "capybara/webkit"
 
+def camelize(str)
+  str.split('_').map {|w| w.capitalize}.join
+end
+
 spec_dir = File.dirname(__FILE__)
 $LOAD_PATH.unshift(spec_dir)
 
-Dir[File.join(spec_dir, "support/**/*.rb")].each {|f| require f}
 
 $data = {}
 Dir[File.join(spec_dir, "fixtures/**/*.yml")].each {|f|
@@ -20,6 +23,7 @@ Dir[File.join(spec_dir, "fixtures/**/*.yml")].each {|f|
 }
 
 $data = OpenStruct.new($data)
+Dir[File.join(spec_dir, "support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
 
@@ -55,6 +59,11 @@ RSpec.configure do |config|
   end
 
   config.include Capybara::DSL
+  Dir[File.join(spec_dir, "support/**/*.rb")].each {|f|
+    base = File.basename( f , '.rb')
+    klass = camelize(base)
+    config.include Module.const_get(klass)
+  }
 end
 
 

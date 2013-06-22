@@ -1,5 +1,5 @@
 module TestHelpers
-  def self.one
+  def sone
     # TODO
   end
 end
