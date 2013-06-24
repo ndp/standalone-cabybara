@@ -2,6 +2,7 @@ require "bundler/setup"
 require "yaml"
 require "ostruct"
 require "rspec"
+require "rspec-steps"
 require "capybara/rspec"
 
 require "capybara/poltergeist"

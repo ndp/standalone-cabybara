@@ -45,7 +45,7 @@ To run a specific feature:
 
     bundle exec rake spec:search
 
-See [Sinple Test](https://github.com/grosser/single_test) for examples.
+See [Single Test](https://github.com/grosser/single_test) for examples.
 
 ## Using fixtures
 
@@ -61,4 +61,5 @@ The pattern:
 ## Additional Links
 
 * http://relishapp.com/rspec
-* http://github.com/jnicklas/capybara
+* https://github.com/jnicklas/capybara
+* https://github.com/LRDesign/rspec-steps
